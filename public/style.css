@@ -1,0 +1,105 @@
+/*Importação da fonte*/
+@font-face {
+    font-family: "Concert One";
+    src: local(Concert One), url(../fonts/Concert_One/ConcertOne-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto), url(../fonts/Roboto/Roboto-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+/*Resetar*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+/*Body Grade de imagens*/
+.main-grid{
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4);
+    gap: 10px;
+    margin: 10px;
+}
+.usuario{
+    width: 30%;
+    height: 15%;
+}
+.curtidas, .descurtidas{
+    height: 100px;
+    width: 100px;
+    display:inline-flex;
+}
+.logado{
+    font-family:"Concert One";
+    font-size: 28px;
+}
+section{
+    background-color: rgba(102, 102, 102, 0.151);
+    gap: 10px;
+}
+.login-usuarios{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    
+}
+.grade1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+}
+.grade2{
+    grid-column-start: 2;
+    grid-column-end:4 ;
+    grid-row-start:2 ;
+    grid-row-end:4 ;
+
+}
+.grade3{
+    grid-column-start: 3 ;
+    grid-column-end:4 ;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.produtos{
+    width: 60vw;
+    height: 40vh;
+    border-radius: 12pxpx;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.img-like,.img-deslike{
+    width: 35px;
+    height:35px;
+    margin: 10px;
+}
+.img-comment{
+    width: 35px;
+    height:35px;
+    margin: 10px;
+}
+.title-products{
+    font-family:"Concert One";
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 25px;
+}
+.comments{
+    display: inline-block;
+    width: 16%;
+    margin:2%;
+    vertical-align:top;
+    margin-left: 60%;
+}
