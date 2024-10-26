@@ -17,53 +17,65 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
-}
 /*Body Grade de imagens*/
 .main-grid{
     display: flex;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4);
-    gap: 10px;
-    margin: 10px;
+    grid-template-columns: repeat (3,1fr);
+    grid-template-rows: repeat (3);
+    margin: 20px;
 }
 .usuario{
-    width: 30%;
-    height: 15%;
+    width: 80px;
+    margin-left: 36px;
 }
 .curtidas, .descurtidas{
-    height: 100px;
-    width: 100px;
-    display:inline-flex;
+    width: 60px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.btn-entrar{
+    background-color: rgb(89, 124, 240);
+    border: none;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: white;
+    padding: 14px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 36px;
 }
 .logado{
-    font-family:"Concert One";
-    font-size: 28px;
+    font-size: 20px;
+    font-family: "Concert One";
+    display:flexbox;
+    white-space: nowrap; /*Não quebrar a linha*/
+    
 }
 section{
     background-color: rgba(102, 102, 102, 0.151);
     gap: 10px;
+    width: 100%;
 }
 .login-usuarios{
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
-    grid-row-end: 4;
-    
+    grid-row-end: 3;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px; 
 }
 .grade1{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    
 }
 .grade2{
     grid-column-start: 2;
-    grid-column-end:4 ;
+    grid-column-end:3 ;
     grid-row-start:2 ;
-    grid-row-end:4 ;
+    grid-row-end:3 ;
 
 }
 .grade3{
@@ -73,7 +85,7 @@ section{
     grid-row-end: 4;
 }
 .produtos{
-    width: 60vw;
+    width: 100%;
     height: 40vh;
     border-radius: 12pxpx;
     object-fit: cover;
@@ -102,4 +114,100 @@ section{
     margin:2%;
     vertical-align:top;
     margin-left: 60%;
+    white-space: nowrap; /*Não quebrar a linha*/
+}
+.span-login{
+    font-family:"Concert One";
+    font-size: 16px;
+    position: absolute;
+   
+}
+/*Rodapé*/
+
+.footer{
+    font-size: 22px;
+    font-family:"Concert One";
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 30px;
+    background-color: rgba(207, 199, 199, 0.521);
+}
+.list-footer{
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+    display: flex;
+    margin: auto;   
+}
+.icones{
+    list-style: none;
+    padding: 10px;
+    width:50px;
+    height: 50px;
+}
+.copy{
+    font-size: 22px;
+    font-family:"Roboto";
+    margin-left: 40%;
+}
+/* Modal login */
+.modal-login{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    display: none;
+    align-items:start;
+    justify-content: center;
+    z-index: 999;
+}
+.modal-login.abrir{
+    display:flex;
+    position: absolute;
+}
+.modal{
+    width: 6%;
+    min-width: 600px;
+    min-height: 300px;
+    background-color: white;
+    padding: 40px;
+  
+}
+.title-modal{
+    text-align: center;
+    font-family:"Roboto";
+}
+.form-modal{
+    display: block;
+    padding: 5px 15px 5px 10px;
+}
+.input-email{
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.input-senha{
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.btn-modal{
+    width: 49%;
+    padding: 11px;
+    margin: 0px;
+    background-color: rgb(89, 124, 240);
+    border: 0.1px none;
+    border-radius: 10px;
+    color: white; 
+}
+.abrir .modal-login{
+    animation: abrirmodal 0.5s;
 }
