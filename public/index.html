@@ -9,8 +9,9 @@
 <body>
     <main class="main-grid">
         <div class="login-usuarios">
-          <img class="usuario" src="/avatars/default-avatar.jpg" alt="Usuario Não logado">
-          <p class="logado"> Usuário não logado </p>
+            <div id="avatar-image">
+            </div>
+          <p id="nickname" class="logado"></p>
           <img class="curtidas" src="/images/curtidas.jpg" alt="curtidas">
           <span class="span-login" >0</span>
           <img class="descurtidas" src="/images/descurtidas.jpg" alt="curtidas">
@@ -62,30 +63,28 @@
             </div>
         </section>
     </main>
-    <!--Modal Login-->
 
      <!-- Modal login -->
      <div class="modal-login" id="modal-login">
         <div class="modal">
             <h1 class="title-modal">Login</h1>
-            <hr>
+            <button onclick="cancelarModal()" class="fechar">X</button>
             <div>
                 <form class="form-modal">
                 <label class = "login-email">
-                        <p class="p-login">Usuário</p>
-                        <input class="input-email" type="user" required>
+                        <p class="p-login">E-mail</p>
+                        <input id="email" class="input-email" type="user">
                 </label>
                     <label class="login-senha">
                         <p class="p-login">Senha</p>
-                        <input class="input-senha" type="password" minlength="8" required>
+                        <input id="senha" class="input-senha" type="password" minlength="8">
                     </label>
                     <div>
                         <button onclick="cancelarModal()" class="btn-modal">Cancelar</button>
-                        <button onclick="entarModal()" class="btn-modal">Entrar</button>
+                        <button id="logar" onclick="entrarModal()" class="btn-modal">Entrar</button>
                     </div>
                 </form>
             </div>
-               
         </div>
     </div>
     
