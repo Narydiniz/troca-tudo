@@ -25,7 +25,7 @@ function abrirModal(){
   
     modal.addEventListener('click', (e) => {
       if(e.target.id == 'fechar'){
-          modal.classList.remove('abrir')
+          modal.classList.remove('fechar')
       }
     })
   }
@@ -51,7 +51,7 @@ function abrirModal(){
     },
     {
       email:"naryaradiniz@gmail.com", //2°
-      senha:"n2328n"
+      senha:"n123456n"
     }
   ]
 
@@ -62,10 +62,11 @@ function abrirModal(){
   const logar = document.getElementById('logar').addEventListener('click', ()=>{
     const email = document.getElementById('email').value
     const senha = document.getElementById('senha').value
-    const leituraDeDados = db.map( dado =>{
+    const leituraDeDados = db.forEach( dado =>{
       if(email == dado.email && senha == dado.senha){
-        imagem
-      }
+       return window.alert('Logado com sucesso')
+      }else
+      return window.alert('Credenciais invalidas')
     })
-  })
+  });
 

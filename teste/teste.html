@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <header>
+        <h1>Teste</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Maculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="teste()">
+            </p>
+
+        </div>
+        <div id="res">
+            Preencha corretamente os dados!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Naryara Diniz- 2024</p>
+    </footer>
+    <script>
+        function teste(){
+            var date = new Date()
+            var ano = data.getFullYear()
+            var fano = document.getElementById('txtano')
+            var res = document.getElementById('res')
+            if (fano.value.length == 0 || fano.value > ano){
+                window.alert('Verifique os dados e tente novamenente!')
+            }else{
+                window.alert('Tudo ok')
+            }
+        }
+    </script>
+
+</body>
+</html>
