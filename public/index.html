@@ -10,53 +10,55 @@
     <main class="main-grid">
         <div class="login-usuarios">
             <div id="avatar-image">
+                <img class="usuario" src="files/avatars/default-avatar.jpg" alt="">
+                <p class="p-login">Usuario não logado</p>
             </div>
           <p id="nickname" class="logado"></p>
-          <img class="curtidas" src="/images/curtidas.jpg" alt="curtidas">
+          <img class="curtidas" src="files/images/curtidas.jpg" alt="curtidas">
           <span class="span-login" >0</span>
-          <img class="descurtidas" src="/images/descurtidas.jpg" alt="curtidas">
+          <img class="descurtidas" src="files/images/descurtidas.jpg" alt="curtidas">
           <span class="span-login" >0</span>
-          <div><button class="btn-entrar" onclick="abrirModal()">Entrar</button></div>
+          <div><button class="btn-entrar" onclick="mostrarModal()">Entrar</button></div>
         </div>
         <section>
             <div class="grade1">
                 <p class="title-products">Produto 1</p>
-                <img class="produtos" src="/images/produto1.jpg" alt="produto1">
+                <img class="produtos" src="files/images/produto1.jpg" alt="produto1">
                 <hr>
                 <div class="likes-deslikes">
-                    <img class="img-like" src="/images/like.jpg" alt="like">
-                    <span onclick="abrirModal()">13</span>
-                    <img class="img-deslike" src="/images/deslike.jpg" alt="deslike">
-                    <span onclick="abrirModal()">5</span>
-                    <img class="img-comment" src="/icons/comentarios.svg" alt="">
+                    <img class="img-like" src="files/images/like.jpg" alt="like">
+                    <span>13</span>
+                    <img class="img-deslike" src="files/images/deslike.jpg" alt="deslike">
+                    <span>5</span>
+                    <img class="img-comment" src="files/icons/comentarios.svg" alt="">
                     <span>1</span>
                     <p class="comments" >Último comentário de: São Paulo,SP</p>
                 </div>
             </div>
             <div class="grade2">
                 <p class="title-products">Produto 2</p>
-                <img class="produtos" src="/images/produto2.jpg" alt="produto1">
+                <img class="produtos" src="files/images/produto2.jpg" alt="produto1">
                 <hr>
                 <div class="likes-deslikes">
-                    <img class="img-like" src="/images/like.jpg" alt="like">
-                    <span onclick="abrirModal()">7</span>
-                    <img class="img-deslike" src="/images/deslike.jpg" alt="deslike">
-                    <span onclick="abrirModal()">1</span>
-                    <img class="img-comment" src="/icons/comentarios.svg" alt="">
+                    <img class="img-like" src="files/images/like.jpg" alt="like">
+                    <span>7</span>
+                    <img class="img-deslike" src="files/images/deslike.jpg" alt="deslike">
+                    <span>1</span>
+                    <img class="img-comment" src="files/icons/comentarios.svg" alt="">
                     <span>1</span>
                     <p class="comments">Último comentário de: Rio de Janeiro, RJ</p>
                 </div>
             </div>
             <div class="grade3">
                 <p class="title-products">Produto 3</p>
-                <img class="produtos" src="/images/produto3.jpg" alt="produto1">
+                <img class="produtos" src="files/images/produto3.jpg" alt="produto1">
                 <hr>
                 <div class="likes-deslikes">
-                    <img class="img-like" src="/images/like.jpg" alt="like">
-                    <span onclick="abrirModal()">5</span>
-                    <img class="img-deslike" src="/images/deslike.jpg" alt="deslike">
-                    <span onclick="abrirModal()">3</span>
-                    <img class="img-comment" src="/icons/comentarios.svg" alt="">
+                    <img class="img-like" src="files/images/like.jpg" alt="like">
+                    <span >5</span>
+                    <img class="img-deslike" src="files/images/deslike.jpg" alt="deslike">
+                    <span >3</span>
+                    <img class="img-comment" src="files/icons/comentarios.svg" alt="">
                     <span>1</span>
                     <p class="comments">Último comentário de: Curitiba, PR</p>
                 </div>
@@ -65,37 +67,28 @@
     </main>
 
      <!-- Modal login -->
-     <div class="modal-login" id="modal-login">
-        <div class="modal">
-            <h1 class="title-modal">Login</h1>
-            <button onclick="cancelarModal()" class="fechar">X</button>
-            <div>
-                <form class="form-modal">
-                <label class = "login-email">
-                        <p class="p-login">E-mail</p>
-                        <input id="email" class="input-email" type="user">
-                </label>
-                    <label class="login-senha">
-                        <p class="p-login">Senha</p>
-                        <input id="senha" class="input-senha" type="password" minlength="8">
-                    </label>
-                    <div>
-                        <button onclick="cancelarModal()" class="btn-modal">Cancelar</button>
-                        <button id="logar" onclick="entrarModal()" class="btn-modal">Entrar</button>
-                    </div>
-                </form>
+     <div id="login-modal" class="modal">
+        <div class="modal-content login-modal">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Login</h2>
+            <div class="login-campos">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="senha" placeholder="Senha" required>
             </div>
+            <div class="login-botoes">
+                <button id="login-submit" onclick="fazerLogin()">Entrar</button>
+            </div>
+            <p id="login-error" style="color: red;"></p>
         </div>
     </div>
-    
     <footer class="footer-container">
         <p class="footer">Troca Tudo</p>
         <ul class="list-footer">
-            <li class="icones"><img src="/icons/facebook.svg" alt="facebook"></li>
-            <li class="icones"><img src="/icons/instagram.svg" alt="instagram"></li>
-            <li class="icones"><img src="/icons/tiktok.svg" alt="tiktok"></li>
-            <li class="icones"><img src="/icons/youtube.svg" alt="youtube"></li>
-            <li class="icones"><img src="/icons/x.svg" alt="x"></li>
+            <li class="icones"><img src="files/icons/facebook.svg" alt="facebook"></li>
+            <li class="icones"><img src="files/icons/instagram.svg" alt="instagram"></li>
+            <li class="icones"><img src="files/icons/tiktok.svg" alt="tiktok"></li>
+            <li class="icones"><img src="files/icons/youtube.svg" alt="youtube"></li>
+            <li class="icones"><img src="files/icons/x.svg" alt="x"></li>
         </ul>
         <p class="copy"> &copy; 2024 Troca Tudo Corp.</p>
     </footer>
